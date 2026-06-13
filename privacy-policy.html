@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — UpMind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #c8c8c8;
+      --text: #111111;
+      --heading1: #111111;
+      --heading2: #111111;
+      --card-bg: #f0f0f0;
+      --card-border: #e0e0e0;
+      --link: #7C3AED;
+      --strong: #111111;
+      --toggle-bg: #e0e0e0;
+      --toggle-icon: "🌙";
+    }
+    [data-theme="dark"] {
+      --bg: #0d0d0d;
+      --text: #e0e0e0;
+      --heading1: #ffffff;
+      --heading2: #A78BFA;
+      --card-bg: rgba(255,255,255,0.05);
+      --card-border: rgba(255,255,255,0.1);
+      --link: #A78BFA;
+      --strong: #ffffff;
+      --toggle-bg: rgba(255,255,255,0.1);
+      --toggle-icon: "☀️";
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      transition: background 0.3s, color 0.3s;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 40px;
+      backdrop-filter: blur(10px);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--heading1);
+      line-height: 1.3;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--heading2);
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    p { margin: 10px 0; }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    strong { color: var(--strong); font-weight: 600; }
+
+    ul {
+      margin: 10px 0 10px 20px;
+    }
+    ul li { margin-bottom: 6px; }
+
+    .meta {
+      font-size: 14px;
+      color: var(--text);
+      opacity: 0.6;
+      margin-top: 6px;
+    }
+
+    .toggle-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      margin-left: 16px;
+      margin-top: 4px;
+      cursor: pointer;
+    }
+    .toggle-icon { font-size: 16px; }
+    .toggle-track {
+      width: 44px;
+      height: 24px;
+      background: var(--toggle-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .toggle-thumb {
+      width: 18px;
+      height: 18px;
+      background: #A78BFA;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.3s;
+    }
+    [data-theme="light"] .toggle-thumb {
+      transform: translateX(20px);
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <div class="container">
+    <div class="header">
+      <div>
+        <h1>Privacy Policy</h1>
+        <div class="meta">UpMind &nbsp;·&nbsp; Last updated: May 2026</div>
+      </div>
+      <div class="toggle-wrap" onclick="toggleTheme()">
+        <span class="toggle-icon" id="toggleIcon">☀️</span>
+        <div class="toggle-track"><div class="toggle-thumb"></div></div>
+      </div>
+    </div>
+
+    <p>This Privacy Policy applies to UpMind. We respect your privacy. Our application does not require user registration and does not collect personal data automatically.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>UpMind does not collect, store, or share any personal data on external servers.</p>
+    <p>The following device features may be used:</p>
+    <ul>
+      <li><strong>Notifications</strong> — used to send reminders. Notification settings are stored locally on your device only.</li>
+    </ul>
+
+    <h2>2. How We Use Information</h2>
+    <p>We use the information you provide only to:</p>
+    <ul>
+      <li>Respond to your support requests</li>
+      <li>Improve app functionality and user experience</li>
+    </ul>
+    <p>We do not sell, rent, or share your personal data with third parties.</p>
+
+    <h2>3. Data Storage</h2>
+    <p>All app data (tasks, habits, finance, sport, settings) is stored locally on your device. No data is sent to any server. Email messages sent through "Contact Us" may be stored for support purposes only.</p>
+
+    <h2>4. Subscriptions and Donations</h2>
+    <p>UpMind offers optional auto-renewable subscriptions (monthly and yearly) via the App Store or Google Play Store.</p>
+    <p>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period. You can manage or cancel your subscription in your Apple ID or Google Play account settings at any time.</p>
+    <p>Donations are also available and are voluntary. They do not unlock any features.</p>
+
+    <h2>5. Security</h2>
+    <p>We take reasonable measures to protect any information you provide. However, no method of transmission over the internet is 100% secure.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>UpMind is not directed at children under the age of 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>7. Data Deletion</h2>
+    <p>You may request deletion of your data by contacting us at <a href="mailto:ipowerstore44@gmail.com">ipowerstore44@gmail.com</a>.</p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated date.</p>
+
+    <h2>9. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at: <strong><a href="mailto:ipowerstore44@gmail.com">ipowerstore44@gmail.com</a></strong></p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById('toggleIcon');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.setAttribute('data-theme', 'light');
+        icon.textContent = '🌙';
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        icon.textContent = '☀️';
+      }
+    }
+  </script>
+</body>
+</html>

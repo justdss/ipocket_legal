@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — UpMind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #c8c8c8;
+      --text: #111111;
+      --heading1: #111111;
+      --heading2: #111111;
+      --card-bg: #f0f0f0;
+      --card-border: #e0e0e0;
+      --link: #7C3AED;
+      --strong: #111111;
+      --toggle-bg: #e0e0e0;
+      --muted: rgba(0,0,0,0.5);
+      --accent-bg: rgba(124,58,237,0.08);
+      --accent-border: rgba(124,58,237,0.2);
+    }
+    [data-theme="dark"] {
+      --bg: #0d0d0d;
+      --text: #e0e0e0;
+      --heading1: #ffffff;
+      --heading2: #A78BFA;
+      --card-bg: rgba(255,255,255,0.05);
+      --card-border: rgba(255,255,255,0.1);
+      --link: #A78BFA;
+      --strong: #ffffff;
+      --toggle-bg: rgba(255,255,255,0.1);
+      --muted: rgba(255,255,255,0.4);
+      --accent-bg: rgba(167,139,250,0.08);
+      --accent-border: rgba(167,139,250,0.25);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      transition: background 0.3s, color 0.3s;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 40px;
+      backdrop-filter: blur(10px);
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--heading1);
+      line-height: 1.3;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--heading2);
+      margin-top: 36px;
+      margin-bottom: 14px;
+    }
+
+    p { margin: 10px 0; }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    strong { color: var(--strong); font-weight: 600; }
+
+    ul { margin: 10px 0 10px 20px; }
+    ul li { margin-bottom: 6px; }
+
+    /* Theme toggle */
+    .toggle-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      margin-left: 16px;
+      margin-top: 4px;
+      cursor: pointer;
+    }
+    .toggle-icon { font-size: 16px; }
+    .toggle-track {
+      width: 44px;
+      height: 24px;
+      background: var(--toggle-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .toggle-thumb {
+      width: 18px;
+      height: 18px;
+      background: #A78BFA;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.3s;
+    }
+    [data-theme="light"] .toggle-thumb { transform: translateX(20px); }
+
+    /* Contact box at top */
+    .contact-top {
+      margin-top: 4px;
+      padding: 20px 24px;
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 12px;
+    }
+    .contact-top p { margin: 0; }
+    .contact-top .response-time {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* FAQ items */
+    .faq-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-weight: 600;
+      color: var(--strong);
+      margin-bottom: 6px;
+    }
+    .faq-a { color: var(--text); opacity: 0.85; }
+
+    /* Resources list */
+    .resources-list {
+      margin: 10px 0 10px 20px;
+      padding: 0;
+    }
+    .resources-list li { margin-bottom: 6px; }
+
+    /* Still need help */
+    .help-box {
+      margin-top: 36px;
+      padding: 20px 0 0 0;
+      border-top: 1px solid var(--card-border);
+    }
+    .help-box p { opacity: 0.85; }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <h1>Support</h1>
+        <div class="meta">UpMind &nbsp;·&nbsp; We're here to help</div>
+      </div>
+      <div class="toggle-wrap" onclick="toggleTheme()">
+        <span class="toggle-icon" id="toggleIcon">☀️</span>
+        <div class="toggle-track"><div class="toggle-thumb"></div></div>
+      </div>
+    </div>
+
+    <div class="contact-top">
+      <p>Email: <a href="mailto:ipowerstore44@gmail.com"><strong>ipowerstore44@gmail.com</strong></a></p>
+      <p class="response-time">Typical response time: 24–48 hours</p>
+    </div>
+
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I cancel my subscription?</div>
+      <div class="faq-a">Go to your device <strong>Settings → Apple ID → Subscriptions</strong> (iOS) or <strong>Google Play → Subscriptions</strong> (Android), find UpMind and tap Cancel. Your access continues until the end of the current billing period.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I restore my purchase?</div>
+      <div class="faq-a">Open UpMind, go to the subscription screen and tap <strong>Restore Purchase</strong>. Make sure you are signed in with the same Apple ID or Google account you used when purchasing.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is my data backed up?</div>
+      <div class="faq-a">All data (tasks, habits, finance, sport, settings) is stored <strong>locally on your device</strong>. No data is sent to any server. If you delete the app or reset your device, your data will be lost.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I delete my data?</div>
+      <div class="faq-a">Uninstalling the app removes all local data. If you submitted anything via Contact Us, email us and we will delete it promptly.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">The app is not working correctly. What should I do?</div>
+      <div class="faq-a">Try restarting the app or reinstalling it. If the issue persists, contact us with a description of the problem, your device model, and OS version.</div>
+    </div>
+
+    <h2>Subscription</h2>
+    <p>UpMind offers optional auto-renewable subscriptions (monthly and yearly) via the App Store or Google Play Store. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period.</p>
+    <p>To manage or cancel: <strong>Apple ID Settings → Subscriptions</strong> or <strong>Google Play → Subscriptions</strong>.</p>
+    <p>For refund requests, visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> (iOS) or the Google Play Help Center (Android).</p>
+
+    <h2>Privacy</h2>
+    <p>No personal data is sent to any server. All app data is stored locally on your device only.</p>
+
+    <h2>Other Resources</h2>
+    <ul class="resources-list" style="list-style: disc;">
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="terms-of-use.html">Terms of Use</a></li>
+    </ul>
+
+    <div class="help-box">
+      <h2 style="margin-top:0;">Still Need Help?</h2>
+      <p>Reach out to us anytime at <a href="mailto:ipowerstore44@gmail.com">ipowerstore44@gmail.com</a>. We read every message.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById('toggleIcon');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.setAttribute('data-theme', 'light');
+        icon.textContent = '🌙';
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        icon.textContent = '☀️';
+      }
+    }
+  </script>
+</body>
+</html>
